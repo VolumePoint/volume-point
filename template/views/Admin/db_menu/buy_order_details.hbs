@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style2.css" />
+</head>
+<bod>
+    <div class="main">
+        <!-- <h2>Profile</h2> -->
+        <div class="card">
+            <div class="card-body">
+                <br> <br>
+                <form action="/admin/buy_order_details/{{order.order_id}}" method="post">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Order ID</td>
+                                    <td>:</td>
+                                    <td>{{order.order_id}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer name:</td>
+                                    <td>:</td>
+                                    <td>{{order.customer_name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Order Date:</td>
+                                    <td>:</td>
+                                    <td>{{order.order_date}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td>:</td>
+                                    <td>{{order.phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Delivery Address</td>
+                                    <td>:</td>
+                                    <td>{{address.house_no}},{{address.society_name}},{{address.area_name}},{{address.nearby_location}},{{address.city}},{{address.state}},{{address.pincode}}.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Order Total</td>
+                                    <td>:</td>
+                                    <td>Rs. {{order.total}}</td>
+                                </tr>
+                                <tr>
+                                    <td>No of Items</td>
+                                    <td>:</td>
+                                    <td>{{order.no_of_item}}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Items</td>
+                                    <td>:</td>
+                                    <td>
+                                        <div class="table-responsive">
+                                            <table class="table no-wrap user-table mb-0">
+                                                <tbody>
+                                                    {{#each book}}
+                                                    <tr class="table_row">
+                                                        <td ><a href="/admin/book_details/{{this.book_id}}">{{this.book_id}}</a></td>
+                                                        <td>
+                                                            <a href="/admin/book_details/{{this.book_id}}"><img src="../../book/{{book_image}}" class="profile_img" alt="" /></a>
+                                                        </td>
+                                                        <td><span class="text-muted">{{this.title}}</span></td>
+                                                        <td>
+                                                            <span class="text-muted">{{this.price}}</span>
+                                                        </td>
+                                                    </tr>
+                                                    {{/each}}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Delivered</td>
+                                    <td>:</td>
+                                    <td><div class="form-group">
+                                        <input type="radio" value="true" name="delivered" {{#if order.delivered}}checked{{/if}}> True
+                                        <input type="radio" value="false" name="delivered" {{#unless order.delivered}}checked{{/unless}}> False
+                                    </div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    <input type="submit" class="btnSubmit" value="Save Changes">
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </body>
+
+</html>

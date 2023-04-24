@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style2.css" />
+</head>
+<bod>
+    <div class="main">
+        <!-- <h2>Profile</h2> -->
+        <div class="card">
+            <div class="card-body">
+                {{!-- <form action="" method="post"> --}}
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="../../book/{{book.book_image}}" class="profile_img"
+                                        style="height: 100px; width: 100px" alt="" />
+                                </td>
+                            </tr>
+                            {{!-- <tr>
+                                <td>Order ID</td>
+                                <td>:</td>
+                                <td>{{book.book_id}}</td>
+                            </tr> --}}
+                            <tr>
+                                <td>Book Title</td>
+                                <td>:</td>
+                                <td>{{book.title}}</td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>:</td>
+                                <td>{{category.cat_name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Author</td>
+                                <td>:</td>
+                                <td>{{book.author}}</td>
+                            </tr>
+                            <tr>
+                                <td>Language</td>
+                                <td>:</td>
+                                <td>{{book.language}}</td>
+                            </tr>
+                            <tr>
+                                <td>Price</td>
+                                <td>:</td>
+                                <td>{{book.price}}</td>
+                            </tr>
+                            <tr>
+                                <td>No of pages</td>
+                                <td>:</td>
+                                <td>{{book.no_of_pages}}</td>
+                            </tr>
+                            <tr>
+                                <td>Quantity</td>
+                                <td>:</td>
+                                <td>{{book.quanity}}</td>
+                            </tr>
+                            <tr>
+                                <td>Publisher</td>
+                                <td>:</td>
+                                <td>{{book.publisher}}</td>
+                            </tr>
+                            <tr>
+                                <td>Publication Data</td>
+                                <td>:</td>
+                                <td>{{book.publication_date}}</td>
+                            </tr>
+                            <tr>
+                                <td>On Sale Date</td>
+                                <td>:</td>
+                                <td>{{book.on_sale_date}}</td>
+                            </tr>
+                            <tr>
+                                <td>Country of Origin</td>
+                                <td>:</td>
+                                <td>{{book.country_of_origin}}</td>
+                            </tr>
+                            <tr>
+                                <td>Book Condition</td>
+                                <td>:</td>
+                                <td>{{book.book_condition}}</td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td>:</td>
+                                <td>{{book.description}}</td>
+                            </tr>
+                            <tr>
+                                <td>Book Transaction Status</td>
+                                <td>:</td>
+                                <td>{{book.book_transaction_status}}</td>
+                            </tr>
+                            <tr>
+                                <td>User</td>
+                                <td>:</td>
+
+                                {{#if user.email}}<td><a href="/admin/user_profile/{{user.email}}">{{user.fullname}}</a>
+                                </td>{{/if}}
+                                {{#unless user.email}}<td><a
+                                        href="/admin/admin_profile/{{book.user_id}}">{{book.user_id}}</a></td>
+                                {{/unless}}
+                            </tr>
+                        </tbody>
+                    </table>
+                    {{!-- <input type="submit" class="btnSubmit" value="Save Changes"> --}}
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </body>
+
+</html>

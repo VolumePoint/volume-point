@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    {{!--
+    <link rel="stylesheet" href="css/style.css" /> --}}
+    <link rel="stylesheet" href="/css/style2.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!------ Include the above in your HEAD tag ---------->
+    <div class="login-header">
+        <h1>Pleace Order</h1>
+    </div>
+    <br />
+    {{!-- enctype="multipart/form-data" --}}
+    <form action="/buy_cart" method="post" >
+        <div class="register-form add_book">
+            <div class="form">
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Fullname *" name="fullname" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="House No *"  name="house_no" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Phone *"  name="phone" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Society/Colony *"  name="society" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Area name *"  name="area_name" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="City *"  name="city" />
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Nearby *"  name="nearby" />
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="State *"  name="state" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Pincode *"  name="pincode" />
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btnSubmit" value="Pleace Order">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

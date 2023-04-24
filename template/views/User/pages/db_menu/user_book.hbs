@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <link rel="icon" href="images/favicon.png" type="image/gif" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>VolumePoint</title>
+
+    <!-- bootstrap core css -->
+    {{!--
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" /> --}}
+    <!-- font awesome style -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    {{!-- <link href="/css/style.css" rel="stylesheet" /> --}}
+    <link rel="stylesheet" href="/css/style2.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="table-responsive">
+                        <table class="table no-wrap user-table mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="border-0 text-uppercase font-medium pl-4">
+                                        Image
+                                    </th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">
+                                        Book ID
+                                    </th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">
+                                        Title
+                                    </th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">
+                                        Category
+                                    </th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">
+                                        Price
+                                    </th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">
+                                        Qty
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each data.records}}
+                                <tr class="table_row">
+                                    <td><span class="text-muted"><a href="/user_book_details/{{this.book_id}}"><img src="../../book/{{book_image}}" class="profile_img" alt="" /></a></span></td>
+                                    <td><span class="text-muted">{{this.book_id}}</span></td>
+                                    <td><span class="text-muted">{{this.title}}</span></td>
+                                    <td><span class="text-muted">{{this.category}}</span></td>
+                                    <td>
+                                        <span class="text-muted">{{this.price}}</span>
+                                    </td>
+                                    
+                                    <td>
+                                        <span class="text-muted">{{this.quanity}}</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="7">
+                                        <hr class="horz_line" />
+                                    </td>
+                                </tr>
+                                {{/each}}
+                                <tr>
+                                    <td>
+                                        {{#if data.records}}
+                                        {{else}}
+                                        <div class="heading_container heading_center">
+                                            <br> <br>
+                                            <center>
+                                                <h2>No records found</h2>
+                                            </center>
+                                        </div>
+                                        {{/if}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="carousel_btn_box">
+            {{#if data.prevPage}} 
+            <a class="carousel-control-prev carousel-control-prev2" href="/user_book?page={{data.prevPage}}"
+                role="button" data-slide="prev">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </a>
+
+            {{/if}}
+            {{#if data.records}} 
+            <a class="carousel-control-next carousel-control-next2" href="/user_book?page={{data.nextPage}}"
+                role="button" data-slide="next">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            {{/if}}
+        </div>
+    </div>
+
+    <!-- jQery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- Google Map -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map -->
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style2.css" />
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/style2.css" />
+    
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <!------ Include the above in your HEAD tag ---------->
+        <div class="login-header">
+            <h1>Thank You!</h1>
+        </div>
+        <center>
+            <h6>Enter the valid UserID and Password</h6>
+        </center>
+        <br />
+        <form action="/registration" method="post" enctype="multipart/form-data">
+            <div class="register-form">
+                <div class="form">
+                    <div class="form-content">
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-body">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>Order ID</td>
+                                                <td>:</td>
+                                                <td>{{order.order_id}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <br></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Customer name</td>
+                                                <td>:</td>
+                                                <td>{{order.customer_name}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <br></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone</td>
+                                                <td>:</td>
+                                                <td>{{order.phone}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <br></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Address</td>
+                                                <td>:</td>
+                                                <td>{{address.house_no}}, {{address.society_name}}, {{address.area_name}}, {{address.nearby_location}}, {{address.city}}, {{address.state}}, {{address.pincode}}.</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <br></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>:</td>
+                                                <td>Rs.{{order.total}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <br></td>
+                                            </tr>
+                                            <tr>
+                                                <td>No of Items</td>
+                                                <td>:</td>
+                                                <td>{{order.no_of_item}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <br></td>
+                                            </tr>
+                                            {{!-- <tr>
+                                                <td>Quantity</td>
+                                                <td>:</td>
+                                                {{#each book}}
+                                                <td>{{this.title}}<br></td>
+                                                {{/each}}
+                                            </tr> --}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- <input type="submit" class="btnSubmit" value="Home"> --}}
+                        <br>
+                        <a href="/" class="btnSubmit btnSubmit2" >Home</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+    
+    </html>
+
+    {{!-- ********************************************************************************************** --}}
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style2.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!------ Include the above in your HEAD tag ---------->
+    <div class="login-header">
+        <h1>Donate Book</h1>
+    </div>
+
+    <br />
+    <form action="/donate_book" method="post" enctype="multipart/form-data">
+        <div class="register-form">
+            <div class="form">
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Title *" value="" name="title" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Author *" value="" name="author" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select id="" name="category">
+                                    {{#each data}}
+                                    <option class="form-control" value="{{cat_id}}">{{cat_name}}</option>
+                                    {{/each }}
+                                    <option class="form-control" value="other">other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Language *" value=""
+                                    name="language" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Price *" value="" name="price" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Quantity *" name="quantity">
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="No of Pages *" value=""
+                                    name="no_of_pages" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Country of Origin *"
+                                    name="country_of_origin">
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Publisher *" value=""
+                                    name="publisher" />
+                            </div>
+                            <div class="form-group">
+                                <select name="book_condition">
+                                    <option class="form-control" value="new">New</option>
+                                    <option class="form-control" value="old">Old</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Publication Date *"
+                                    name="publication_date">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Description *" name="description">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <input type="file" class="form-control" placeholder="Book Image *" value=""
+                                    name="book_image" />
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <input type="submit" class="btnSubmit" value="Next">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
